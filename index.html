@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AMPortfolio</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/Image Menu with Jquery.css">
+<link href="css/lightbox.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/slicknav.css">
+<!--jquery-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script src="js/jquery.slicknav.js"></script> 
+
+<!--ダウンロードしたファイル-->
+<script type="text/javascript" src="js/jquery-easing-1.3.pack.js"></script>
+<script type="text/javascript" src="js/jquery-easing-compatibility.1.2.pack.js"></script>
+
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 600; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+	
+	</script>
+
+
+</head>
+
+<body>
+
+	<script type="text/javascript">
+$(document).ready(function () {
+
+  // find the elements to be eased and hook the hover event
+  $('div.jimgMenu ul li a').hover(function() {
+    
+    // if the element is currently being animated (to a easeOut)...
+    if ($(this).is(':animated')) {
+      $(this).stop().animate({width: "310px"}, {duration: 450, easing:"easeOutQuad"});
+    } else {
+      // ease in quickly
+      $(this).stop().animate({width: "310px"}, {duration: 400, easing:"easeOutQuad"});
+    }
+  }, function () {
+    // on hovering out, ease the element out
+    if ($(this).is(':animated')) {
+      $(this).stop().animate({width: "78px"}, {duration: 400, easing:"easeInOutQuad"})
+    } else {
+      // ease out slowly
+      $(this).stop('animated:').animate({width: "78px"}, {duration: 450, easing:"easeInOutQuad"});
+    }
+  });
+});
+</script>
+<script>	
+		$(document).ready(function(){
+ $('#menu').slicknav();
+});
+</script>
+
+	<div id="header">
+	<span class="small">
+		<ul id="menu">
+			<li><a href="index.html">Akasaka Misaki Portfolio Site</a> 
+			<li><a href="#l_title">About Logo</a> 
+			<li><a href="#">Work</a>
+  		<ul>
+    	<li><a href="#tdw">Sun & Moon</a> 
+    	<li><a href="#bcp">BCP</a> 
+    	<li><a href="#oc">Open Campus Flyer</a>
+    	<li><a href="#menu1">Menu & Business card</a>
+    	<li><a href="#intern">Internship</a>
+  		</ul>
+		</li>
+		</ul>
+		</span>
+	
+	
+	
+		<img src="image/header.png" class="header"width="100%">
+		<img src="image/title.png" alt="Akasaka Misaki Portfolio Site" class="h_title">
+			
+			<span class="big">
+			<div class="jimgMenu">
+    			<ul>
+      				<li class="landscapes"><a href="#l_title">Landscapes</a></li>
+      				<li class="people"><a href="#tdw">People</a></li>
+      				<li class="nature"><a href="#bcp">Nature</a></li>
+      				<li class="abstract"><a href="#oc">Abstract</a></li>
+      				<li class="menu"><a href="#menu1">Abstract</a></li>
+      				<li class="intern"><a href="#intern">Urban</a></li>
+      				
+    			</ul>
+  			</div>
+		   </span>
+		   
+			<a href="#header"><img src="image/nav_top.png" class="top" width="3%"></a>
+	</div>
+	
+	<main>
+		
+		<img src="image/aboutlogo.png"  alt="About logo" id="l_title">
+		<div id="logo">
+			<img src="image/logo_image.jpg" class="logo_image">
+			<p class ="logo_text">“あかさかみさき”のポートフォリオサイトにようこそ！<br class="sp">
+			左にあるロゴマークは今回のサイトを作るにあたって作成した私自身のロゴです。<br class="sp">苗字に赤色があるので赤を強調としたひよこのロゴです。<br><br>
+			“あかさかみさき”をローマ字表記にすると“Akasaka Misaki”これを略すとAMになります。<br class="sp">
+			私の勝手なイメージですがAM→午前→朝と考えました。<br class="sp">
+			そこから朝ってなんだろうなと考えたところ、朝はにわとりが鳴く！という考えに至り<br class="sp">ました。<br class="sp">
+			にわとりのロゴにしようかと思いましたが「まだまだ成長し続けるぞ！」という意気込<br class="sp">みの下、ひよこのマークにしました。<br class="sp">ロゴマークをよく見ていただくとAMという表記になっています。</p>
+		</div>
+			
+		<img src="image/work.png" alt ="Work" class="w_title">
+		<div id="tdw">
+			<img src="image/sunandmoom.png" alt="Sunano Moon" class="tdw_title">
+			<a href="image/tdw_picture.jpg"data-lightbox="image"><img src="image/tdw_picture.png" image-width="95%" class="tdw_picture"></a>
+			<p class="tdw_text">3年生のゼミメンバーで制作し、<br class="sp">TOKYO DESIGN WEEK 2016に出展<br class="sp">した作品です。<br class="sp">
+			この作品はkinectを使用したもので<br class="sp">２つの場面で遊ぶ事ができるインタラ<br class="sp">クティブな作品です。<br class="sp">
+			タイヨウの場面では雲をさわり、ツキ<br class="sp">の場面では星をはじく事がでます。<br class="sp">
+			連日大盛況で小さいお子さんから大人<br class="sp">まで幅広く楽しんで頂けました。
+			</p>
+		<div class="clear"></div>
+		<img src="image/logodesinge.png"class="logodesign">
+			<a href="image/tdw_picture2.jpg"data-lightbox="image"><img src="image/tdw_picture2.png" image-width="95%" class="tdw_picture2"></a>
+			<p class="tdw_text2">今回の制作で私が担当したのがロゴ制作、封筒とフライヤーのデザインです。<br class="sp">
+			制作が任された時点で作品に使用する鳥のイラストなどは完成していたので、世界観が変わらないようフォントやロゴの<br class="sp">テイストには気を使いました。<br class="sp">
+			今作のテーマが「身近にありあまり実感しない太陽と月の素晴らしさを再確認しよう」ということで「灯台下暗し」とい<br class="sp">う言葉からロゴマークを灯台にしました。<br class="sp">
+			封筒デザインは必要最低限な文字情報を入れ、作品で使用されているイラストを前面にだしインパクトを出しました。<br class="sp">
+			フライヤーの表面は手に取ってみたくなるようなかわいらしいデザインをいしきしました。<br class="sp">
+			裏面には作品説明と作品の遊び方が記されています。<br class="sp">
+			情報が混じらないようにラインをいれ、綺麗にみえるようにレイアウトをしました。</p>
+		</div>
+		
+		<img src="image/line.png" class="line">
+		<div id ="bcp">
+			<img src="image/bcp.png" class="bcp_title">
+			<a href="image/bcp_picture.jpg"data-lightbox="image"><img src="image/bcp_picture.png" class="bcp_picture"></a>
+			<img src="image/bcp-content.png" class="bcp_content">
+			<div class="clear"></div>
+			<p class="bcp_text">
+			自分の趣味をまとめたサイトをつくりました。<br class="sp">
+			かっこいいサイトにしたいと思い、いつもとは違ったテイストでデザインしてみました。<br class="sp">
+			また簡単にサイトを更新できるように様々なSNSと連携させました。<br class="sp">
+			どのページにも左下に私の趣味用のtwitterアカウントが表示されるようになっています。<br class="sp">
+			TOPページはjavascriptでスライドショーにし画像が切り替わるようになっています。<br class="sp">
+			PHOTOページはインスタグラムと連携させて自動で写真欄が更新されるようになっています。<br class="sp">
+			BLOGページはアメーバブログの自分のページに飛ぶようにリンクづけしています。<br class="sp">
+			MASSAGEページは私と連絡がとれるよう問い合わせのページになっています。<br class="sp">
+			ここで送信したメッセージは私のメールアドレスに届く仕様になっています。<br class="sp">
+			</p>
+		</div>
+		
+		<img src="image/line.png" class="line">
+		<div id ="oc">
+			<img src="image/oc.png" class="oc_title">
+			<a href="image/ocws.jpg"data-lightbox="image"><img src="image/ocws.png" class="ocws"></a>
+			<a href="image/ocfrend.jpg"data-lightbox="image"><img src="image/ocfrend.png" class ="ocfriend"></a>
+			<p class="oc_text">
+			夏のオープンキャンパスで使用されたフライヤーです。<br class="sp">
+			写真と説明文以外は私がデザインし制作したものになります。<br class="sp">
+			ゼミのメンバー1人1人が課題で制作し、私のフライヤーが選ばれ<br class="sp">起用されました。<br class="sp">
+			他のメンバーとは違った個性的なものを制作たいと思いキャラク<br class="sp">
+			ターを使ってかわいくポップに自分らしさを表現してみました。<br class="sp">
+			全体のレイアウトも他の情報と混じらないように意識して配置し<br class="sp">ました。<br class="sp">
+			</p>
+		</div>
+		
+		<img src="image/line.png" class="line">
+		
+		<div id ="menu1">
+			<img src="image/menu.png"class="menu_title">
+			<a href="image/menu1.jpg"data-lightbox="image"><img src="image/menu1.png"class="menu_picture"></a>
+			<p class="menu_text">
+			実家が営んでいる割烹料理店のメニュー作成を頼まれて作ったものです。<br class="sp">
+			写真の有無を聞いたところその都度盛り付けなどが変わったりするので必要ないとのことで文字だけのシンプル<br class="sp">なデザインにしました。<br class="sp">
+			全体の統一感を出したかったのでメインメニューのデザインを似せました。<br class="sp">
+			また冬季限定のメニューでは他のものとデザインを変えて特別感を出しました。<br class="sp">
+			フグが一番押しのメニューということでフグのイラストを加えフグがおすすめであることをアピールしました。</p>
+			<a href="image/menu2.jpg"data-lightbox="image"><img src="image/menu2.png" class="menu_picture"></a>
+			<p class="menu_text">
+			<span class="small">左上がサービス券で右上が名刺になります。</span>
+			<span class="big">左がサービス券で右が名刺になります。</span><br class="sp">
+			ロゴマークは昔から使われていたものを使用しました。<br class="sp">
+			両方ともメニューと似たデザインにしてお店の統一感を出しました。<br class="sp">
+			サービス券でサービスする品はその都度変わるとのことであえて商品名は入れず、名前を「女将のオススメ」に<br class="sp">し何をサービスしてもらえるのか興味を持ってい頂けるようにしました。<br class="sp">
+			また指定はありませんでしたが有効期限の欄を入れることで駆け込みのお客様を狙いました。<br class="sp">
+			名刺はロゴを大胆に使用してインパクトが出しました。<br class="sp">
+			お店の場所が少しわかりにくいので地図情報のQRコードを載せお客様がご来店しやすいようにしました。<br class="sp"></p>
+		</div>
+		
+		
+		<img src="image/line.png" class="line">
+		<div id="intern">
+			<img src="image/intern.png" class="intern_title">
+			<img src="image/logodesinge.png" class="logodesign2">
+			<div class="clear"></div>
+			<a href="image/intern_logo.jpg"data-lightbox="image"><img src="image/intern_logo.png"class="intern_logo"></a>
+			<p class="intern_text">
+			上のロゴはインターン先の企業に頼まれて作った会社のロゴです。<br class="sp">
+			依頼内容は、「今ある４つの事業とこれからも進化していく感じを<br class="sp">
+			表現してほしい」、「イメージカラーはオレンジなのでオレンジで<br class="sp">
+			表現してほしい」でした。<br class="sp">
+			オレンジをベースとし4つの事業を周りの三角形で表現し太陽を表現<br class="sp">
+			しました。また全体の形を四角形にせず、型にはまらず挑戦し続ける<br class="sp">
+			という感じを表現しました。<br class="sp">
+			<br class="sp">
+			下のロゴはインターン先の企業の事業の１つである「ヒトツクwebス<br class="sp">
+			クール」のロゴになります。<br class="sp">
+			「お客様は大切な仲間、一生寄り添っていく存在」をコンセプトに作<br class="sp">
+			ってほしいとのことでした。<br class="sp">
+			仲間ということで握手をしているイメージと全体の形をハートに見え<br class="sp">
+			るようにしました。</p>
+			<div class="clear"></div>
+			<img src="image/html.png"class="intern_html">
+			<div class="clear"></div>
+			<img src="image/html_pic.png" class="intern_picture">
+			<p class="intern_text2">
+			インターン先の企業から頂いた仕事でライティングページを作成しました。<br class="sp">
+			文章以外のデザインやレイアウトは私が作成し、写真などの加工やキャッチ<br class="sp">
+			コピーを考えたりもしました。<br class="sp">
+			クライアントの方から「今までに見たことがないようなもの」、「インパク<br class="sp">
+			トが大きいもの」、「自分の写真を使ってほしい」などの依頼に沿って作成<br class="sp">
+			しました。<br class="sp">
+			本が先に出版されてからのライティングページの作成だったので本の表紙の<br class="sp">
+			デザインに合わせて作成していきました。<br class="sp">
+			<br class="sp">
+				<span class="big">左の画像はイメージで実際にコーディングしたものとは多少ことなります。</span><br class="sp">
+			<br><br>
+				URL<span class="big">　▶︎▶︎　</span><span class="small">▼</span><a href="http://akihirobooks-facebooksyuukyaku.com/">http://akihirobooks-facebooksyuukyaku.com/</a>
+			</p>
+		</div>
+		
+	</main>
+	
+	<footer>
+		<img src="image/fotter.png" width="100%" class="footer">
+	</footer>
+	<script src="js/lightbox.js"></script>
+</body>
+</html>
